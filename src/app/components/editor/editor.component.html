@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      
+      <form>
+        <div class="form-group">
+          <label for="entrada">Entrada</label>
+          <ngx-codemirror
+            name="entrada"
+            [(ngModel)]="entrada"
+            [options]="{
+              lineNumbers: true,
+              theme: 'material',
+              mode: 'xml'
+            }"
+          ></ngx-codemirror>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="getValue();">Get value</button>
+        <button type="button" class="btn btn-warning" (click)="setValue();">Set value</button>
+
+      </form>
+
+    </div>
+    <div class="col-sm">
+
+      <form>
+        <div class="form-group">
+          <label for="consola">Consola</label>
+          <ngx-codemirror
+            name="consola"
+            [(ngModel)]="consola"
+            [options]="{
+              theme: 'material'
+            }"
+          ></ngx-codemirror>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
